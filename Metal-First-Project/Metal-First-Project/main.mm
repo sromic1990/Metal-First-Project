@@ -7,8 +7,6 @@
 #include <Metal/Metal.hpp>
 #include "mtl_engine.hpp"
 
-#include <iostream>
-
 int main(int argc, const char * argv[]) {
     
     MTLEngine engine;
