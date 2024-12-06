@@ -1,0 +1,75 @@
+# --- General Xcode ---
+.DS_Store
+*.swp
+*.xcuserstate
+*.xcworkspace
+*.xcuserdata/
+*.xcodeproj/*.pbxuser
+*.xcodeproj/*project.xcworkspace/xcuserdata/
+*.xcodeproj/*project.xcworkspace/xcshareddata/
+.idea/
+*.mode1v3
+*.mode2v3
+*.perspectivev3
+
+# --- Build Products ---
+build/
+Build/
+DerivedData/
+*.app
+*.ipa
+*.dSYM
+*.framework
+*.xcframework
+
+# --- Indexing Files ---
+*.hmap
+*.lldb
+*.map
+*.tbd
+*.tui
+
+# --- Code Signing ---
+*.mobileprovision
+*.entitlements
+
+# --- Metal Shader Intermediate Files ---
+*.air
+*.metallib
+
+# --- System-Specific Files ---
+Thumbs.db
+*.orig
+*.so
+*.dll
+*.exe
+*.o
+*.obj
+*.pyc
+*.pyo
+*.log
+*.lock
+
+# --- Debug and Testing ---
+*.profraw
+*.gcno
+*.gcda
+
+# --- User-Generated Files ---
+*.local
+*.tags
+
+# --- Git and Versioning ---
+*.lock
+*.bak
+*.tmp
+*.diff
+*.patch
+
+# --- C++ Specific ---
+*.gch
+*.pch
+
+# --- Others ---
+*.xcscheme
+*.xcconfig
