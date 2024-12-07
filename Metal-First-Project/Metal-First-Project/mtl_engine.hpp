@@ -19,6 +19,11 @@
 #include <QuartzCore/QuartzCore.hpp>
 #include <simd/simd.h>
 
+#include "external/stb/stb_image.h"
+#include "VertexData.hpp"
+#include "Texture.hpp"
+
+#include <filesystem>
 #include <iostream>
 
 class MTLEngine
@@ -32,7 +37,7 @@ private:
     void initDevice();
     void initWindow();
     
-    void createTriangle();
+    void createSquare();
     void createDefaultLibrary();
     void createCommandQueue();
     void createRenderPipeline();
@@ -54,5 +59,7 @@ private:
     MTL::CommandQueue* metalCommandQueue;
     MTL::CommandBuffer* metalCommandBuffer;
     MTL::RenderPipelineState* metalRenderPSO;
-    MTL::Buffer* triangleVertexBuffer;
+    MTL::Buffer* squareVertexBuffer;
+    
+    Texture* grassTexture;
 };

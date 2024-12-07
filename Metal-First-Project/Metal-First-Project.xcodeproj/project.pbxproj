@@ -7,10 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		30EED5AF2D04FE1F008C9E06 /* libglfw.3.4.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 30FF35B12D03893F002FA76A /* libglfw.3.4.dylib */; };
 		30FF35A02D0383E7002FA76A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30FF359F2D0383E7002FA76A /* Foundation.framework */; };
 		30FF35A22D0383EF002FA76A /* Metal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30FF35A12D0383EF002FA76A /* Metal.framework */; };
 		30FF35A42D0383FD002FA76A /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30FF35A32D0383FD002FA76A /* QuartzCore.framework */; };
-		30FF35DC2D038AAF002FA76A /* libglfw.3.4.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 30FF35D22D038AAF002FA76A /* libglfw.3.4.dylib */; };
 		30FF35DF2D038B00002FA76A /* libglfw.3.4.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 30FF35D22D038AAF002FA76A /* libglfw.3.4.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 /* End PBXBuildFile section */
 
@@ -26,7 +26,7 @@
 		};
 		30FF35E02D038B00002FA76A /* Embed Libraries */ = {
 			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 12;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
@@ -177,6 +177,11 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
+		30EED5B42D0501F3008C9E06 /* assets */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = assets;
+			sourceTree = "<group>";
+		};
 		30FF352E2D0382EF002FA76A /* Metal-First-Project */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = "Metal-First-Project";
@@ -192,7 +197,7 @@
 				30FF35A02D0383E7002FA76A /* Foundation.framework in Frameworks */,
 				30FF35A22D0383EF002FA76A /* Metal.framework in Frameworks */,
 				30FF35A42D0383FD002FA76A /* QuartzCore.framework in Frameworks */,
-				30FF35DC2D038AAF002FA76A /* libglfw.3.4.dylib in Frameworks */,
+				30EED5AF2D04FE1F008C9E06 /* libglfw.3.4.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -351,6 +356,7 @@
 		30FF359D2D038342002FA76A /* metal-cpp */ = {
 			isa = PBXGroup;
 			children = (
+				30EED5B42D0501F3008C9E06 /* assets */,
 				30FF354D2D038342002FA76A /* Foundation */,
 				30FF358C2D038342002FA76A /* Metal */,
 				30FF35922D038342002FA76A /* MetalFX */,
@@ -561,6 +567,7 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
+				30EED5B42D0501F3008C9E06 /* assets */,
 				30FF352E2D0382EF002FA76A /* Metal-First-Project */,
 			);
 			name = "Metal-First-Project";
@@ -744,6 +751,7 @@
 					/opt/homebrew/Cellar/glfw/3.4/lib,
 					"$(PROJECT_DIR)/glfw/3.4/lib",
 				);
+				OTHER_LDFLAGS = "-v";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -763,6 +771,7 @@
 					/opt/homebrew/Cellar/glfw/3.4/lib,
 					"$(PROJECT_DIR)/glfw/3.4/lib",
 				);
+				OTHER_LDFLAGS = "-v";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
