@@ -60,6 +60,8 @@ void MTLEngine::initWindow()
     
     int width, height;
     glfwGetFramebufferSize(glfwWindow, &width, &height);
+    glfwSetWindowUserPointer(glfwWindow, this);
+    glfwSetFramebufferSizeCallback(glfwWindow, frameBufferSizeCallback);
     
     metalWindow = glfwGetCocoaWindow(glfwWindow);
     metalLayer = [CAMetalLayer layer];
@@ -150,4 +152,15 @@ void MTLEngine::encodeRenderCommand(MTL::RenderCommandEncoder* renderCommandEnco
     NS::UInteger vertexStart = 0;
     NS::UInteger vertexCount = 3;
     renderCommandEncoder->drawPrimitives(typeTriangle, vertexStart, vertexCount);
+}
+
+void MTLEngine::frameBufferSizeCallback(GLFWwindow *window, int width, int height)
+{
+    MTLEngine* engine = (MTLEngine*)glfwGetWindowUserPointer(window);
+    engine->resizeFrameBuffer(width, height);
+}
+
+void MTLEngine::resizeFrameBuffer(int width, int height)
+{
+    metalLayer.drawableSize = CGSizeMake(width, height);
 }
